@@ -1,0 +1,349 @@
+html {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 62.5%;
+    font-family: Monserrat, 'PT sans';
+}
+
+body {
+    background: linear-gradient(90deg, rgb(123, 121, 228), rgb(174, 173, 253), rgb(123, 121, 228));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* Form design */
+
+form {
+    margin: 10rem auto 0rem;
+    width: 75%;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation: slow ease-out 2s;
+    -webkit-animation: slow ease-out 2s;
+}
+
+@media (min-width: 460px) {
+    form {
+        width: 55%;
+    }
+}
+
+@media (min-width: 764px) {
+    form {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1000px) {
+    form {
+        width: 25%;
+    }
+}
+
+fieldset {
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.172);
+    border: none;
+    padding: 1rem 2.5rem 2rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+@media (min-width: 400px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 960px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@keyframes slow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin: 5rem auto;
+    border: none;
+    background: none;
+    border-bottom: white solid .5px;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+input:checked~form {
+    display: block;
+    animation: slow 1s ease-in-out;
+    -webkit-animation: slow 1s ease-in-out;
+}
+
+.exit {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.check-exit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+::placeholder {
+    color: white;
+    font-family: Monserrat, 'PT Sans';
+    font-size: 1.5rem;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+input:focus-visible {
+    border-bottom: solid 1px skyblue;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 35px;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    background: linear-gradient(18deg, rgb(130, 146, 238), white);
+    background-size: 400%;
+    border: none;
+    color: white;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.submit:hover {
+    background: linear-gradient(18deg, rgb(9, 75, 29), rgb(50, 170, 70), rgb(9, 75, 29));
+    background-size: 100%;
+    transition: .4s all;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    -ms-transition: .4s all;
+    -o-transition: .4s all;
+}
+
+
+/* button of user  */
+
+.user {
+    position: absolute;
+    margin: 25rem auto 0rem;
+    left: 0;
+    right: 0;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    background-color: rgba(84, 95, 106, 0.501);
+    opacity: 1;
+    transition: all .9s;
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    -ms-transition: all .9s;
+    -o-transition: all .9s;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.user:hover {
+    color: grey;
+    background: white;
+    box-shadow: white 0 0 10px, white 0 0 40px, white 0 0 80px;
+}
+
+label .fa-user {
+    font-size: 8rem;
+    margin: 3.5rem auto;
+}
+
+#checkbtn {
+    display: none;
+}
+
+input:checked~.user {
+    transition: all .3s;
+    -webkit-animation: all .4s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    opacity: 0;
+    transform: rotateY(160deg);
+    -webkit-transform: rotateY(160deg);
+    -moz-transform: rotateY(160deg);
+    -ms-transform: rotateY(160deg);
+    -o-transform: rotateY(160deg);
+}
+
+
+/* Background Animated - bubbles */
+
+.background-animation .box {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to top, transparent, rgb(255, 255, 255), white);
+    position: absolute;
+    opacity: 0;
+    bottom: 0rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    z-index: -1;
+    animation: flaying 10s infinite;
+    -webkit-animation: flaying 10s infinite;
+}
+
+.box:nth-child(1) {
+    left: 0rem;
+    animation-delay: -1s;
+}
+
+.box:nth-child(2) {
+    left: 20rem;
+    animation-delay: 4s;
+}
+
+.box:nth-child(3) {
+    right: 20rem;
+    animation-delay: 2s;
+}
+
+.box:nth-child(4) {
+    right: 15rem;
+    animation-delay: .6s;
+}
+
+.box:nth-child(5) {
+    right: 0;
+    animation-delay: .1s;
+}
+
+.box:nth-child(6) {
+    left: 10rem;
+    width: 150px;
+    height: 150px;
+    animation-delay: 3s;
+}
+
+.box:nth-child(7) {
+    left: 20rem;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+}
+
+.box:nth-child(8) {
+    left: 25rem;
+    width: 70px;
+    height: 70px;
+    animation-delay: 6s;
+}
+
+.box:nth-child(9) {
+    left: 30rem;
+    width: 50px;
+    height: 50px;
+    animation-delay: 5s;
+}
+
+.box:nth-child(10) {
+    left: 5rem;
+    width: 20px;
+    height: 20px;
+    animation-delay: 7s;
+}
+
+.box:nth-child(11) {
+    right: 25rem;
+    width: 20px;
+    height: 20px;
+    animation-delay: 9s;
+}
+
+.box:nth-child(12) {
+    right: 40rem;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+}
+
+.box:nth-child(13) {
+    right: 50rem;
+    width: 50px;
+    height: 50px;
+    animation-delay: 4s;
+}
+
+.box:nth-child(14) {
+    right: 40rem;
+    width: 60px;
+    height: 60px;
+    animation-delay: 6s;
+}
+
+@keyframes flaying {
+    0% {
+        bottom: -4;
+        opacity: 0;
+    }
+    50% {
+        opacity: .4;
+    }
+    100% {
+        bottom: 150rem;
+        opacity: 1;
+    }
+}
